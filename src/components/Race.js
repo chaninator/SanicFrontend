@@ -8,7 +8,7 @@ import RacerSix from './RacerSix';
 import './Race.css';
 
 
-class SanicAdminSelect extends Component {
+class Race extends Component {
   constructor(){
     super();
     this.state = {
@@ -119,4 +119,4 @@ race6(){
   }
 }
 
-export default SanicAdminSelect;
+export default Race;

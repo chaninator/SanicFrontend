@@ -7,7 +7,7 @@ import WaitingPage from './components/WaitingPage';
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 import SanicRacer from './components/SanicRacer';
-import Admin from './components/Admin'
+import Admin from './components/Admin';
 import './App.css';
 
 import io from 'socket.io-client';
@@ -33,7 +33,6 @@ class App extends Component {
     }, () => {
       socket.emit('vote', this.state.chosenSanic.sanic_id)
     })
-
   }
 
   componentWillMount() {
@@ -76,6 +75,9 @@ class App extends Component {
     if (prevState.sanic !== this.state.sanic) {
       this.sessionButton()
     }
+  if (prevState.chosenSanic !== this.state.chosenSanic) {
+      console.log('state of App.js chosenSanic', this.state.chosenSanic);
+      }
   }
 
   sessionButton() {
@@ -108,6 +110,7 @@ class App extends Component {
 
   }
 }
+
 
 export default App
 
